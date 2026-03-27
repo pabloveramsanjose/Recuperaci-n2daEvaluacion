@@ -6,6 +6,10 @@ public class EmpleadoPorHoras extends EmpleadoTiempoCompleto{
 		super(nombre, salarioBase, autonomo, irpf);
 	}
 	
+	/**
+	 * Clase de empleadoPorHoras el cual se le hereda todos los atreibutos de la clase empleados
+	 */
+	
 public double calcularSalarioNeto() {
 		
 	
@@ -21,7 +25,11 @@ public double calcularSalarioNeto() {
 		return calcularSalarioNeto();
 			
 	}
-
+/**
+ * Metodo para calcular el salarioNeto
+ * @param comision
+ * @return
+ */
 public double calcularSalarioBruto(int comision) {
 	
 	comision = 10;
