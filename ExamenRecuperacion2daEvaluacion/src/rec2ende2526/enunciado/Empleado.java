@@ -58,9 +58,10 @@ public abstract class Empleado {
 	}
 	
 	
-	public void calcularSalariaBruto(double pagaExtra, int numeroMeses) {
+	public double calcularSalariaBruto(double pagaExtra, int numeroMeses) {
 		
-		double salarioBruto = (salarioBase + pagaExtra)/numeroMeses;
+		double salarioBruto = (salarioBase + (pagaExtra/numeroMeses));
+		return salarioBruto;
 		
 	}
 	
