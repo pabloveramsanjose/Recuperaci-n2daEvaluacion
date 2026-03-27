@@ -6,20 +6,23 @@ public class EmpleadoPorHoras extends EmpleadoTiempoCompleto{
 		super(nombre, salarioBase, autonomo, irpf);
 	}
 	
-public void calcularSalarioNeto() {
+public double calcularSalarioNeto() {
 		
-		if(this.autonomo) {
-
-			double salarioBruto = this.salarioBase;
-				
-				double salarioNeto = salarioBruto - (salarioBruto * 0.07);
+	
+		if(!this.autonomo) {
+			
+			 return super.calcularSalarioNeto();
+		
 		}else {
-			return ;
+			
+			double bruto = this.salarioBase;
+			 double salarioNeto = bruto - (bruto * 0.07);
 		}
-		
+		return calcularSalarioNeto();
+			
 	}
 
-public void calcularSalarioBruto(int comision) {
+public double calcularSalarioBruto(int comision) {
 	
 	comision = 10;
 	
@@ -30,8 +33,28 @@ public void calcularSalarioBruto(int comision) {
 		throw new IllegalArgumentException("La comision no puede ser negativa");
 	}
 	
-	
+return  SalarioBruto;
 	
 }
+
+public double calcularSalarioNeto(int comision) {
+	
+	comision = 10;
+	
+	if(!this.autonomo) {
+		
+		double bruto = this.salarioBase;
+		double salarioNeto = (bruto + comision) - (bruto + comision) * 0.07;
+		 
+	
+	}else {
+		
+		double bruto = this.salarioBase;
+		 double salarioNeto = (bruto + comision) - (bruto + comision);
+	}
+	return calcularSalarioNeto();
+		
+}
+
 
 }
