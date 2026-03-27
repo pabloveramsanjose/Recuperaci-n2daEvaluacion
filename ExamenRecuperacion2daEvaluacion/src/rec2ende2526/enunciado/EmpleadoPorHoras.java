@@ -19,4 +19,19 @@ public void calcularSalarioNeto() {
 		
 	}
 
+public void calcularSalarioBruto(int comision) {
+	
+	comision = 10;
+	
+	double SalarioBruto = this.salarioBase + comision;
+	
+	if (comision < 0) {
+		
+		throw new IllegalArgumentException("La comision no puede ser negativa");
+	}
+	
+	
+	
+}
+
 }
