@@ -60,9 +60,7 @@ public abstract class Empleado {
 	
 	public double calcularSalariaBruto(double pagaExtra, int numeroMeses) {
 		
-		 
-		
-		
+
 		if(pagaExtra < 0) {
 			
 			throw new IllegalArgumentException("La paga extra no puede ser negativa");
