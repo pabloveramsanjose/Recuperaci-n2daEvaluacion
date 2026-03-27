@@ -7,11 +7,11 @@ public class EmpleadoTiempoCompleto extends Empleado{
 		
 	}
 	
-	public void calcularSalarioNeto(double salarioBruto, float irpf) {
+	public void calcularSalarioNeto() {
 		
-		salarioBruto = this.calcularSalariaBruto(salarioBruto,0);
+		double salarioBruto = this.salarioBase;
 		
-		double salarioNeto = salarioBruto - (salarioBruto - irpf);
+		double salarioNeto = salarioBruto - (salarioBruto * irpf);
 		
 	}
 
